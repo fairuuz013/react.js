@@ -1,0 +1,39 @@
+/* AlertBox.module.css */
+.alert {
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 10px 0;
+  transition: all 0 ease;
+}
+
+.success {
+  background-color: #e6ffed;
+  border: 1px solid #34d399;
+  color: #065f46;
+}
+
+
+.success:hover {
+  background-color: #d1fae5; /* lebih gelap dikit */
+}
+
+.warning {
+  background-color: #fff7ed;
+  border: 1px solid #fbbf24;
+  color: #92400e;
+}
+.warning:hover {
+  background-color: #ffedd5;
+}
+
+
+.error {
+  background-color: #fee2e2;
+  border: 1px solid #ef4444;
+  color: #991b1b;
+}
+.error:hover {
+  background-color: #fecaca;
+}

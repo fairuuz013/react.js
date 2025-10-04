@@ -1,0 +1,15 @@
+.box {
+  background-color: lightblue;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  transition: all 0.3s ease; /* biar smooth pas berubah */
+}
+
+/* Mobile (max 600px) */
+@media (max-width: 600px) {
+  .box {
+    background-color: lightcoral;
+    padding: 10px;
+  }
+}
