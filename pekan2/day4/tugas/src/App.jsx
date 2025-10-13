@@ -12,7 +12,7 @@ export default function App() {
 
       {/* <QuranSurahList/> */}
 
-      <QuranFilteredAyah/>
+      {/* <QuranFilteredAyah/> */}
 
 
     </div>
