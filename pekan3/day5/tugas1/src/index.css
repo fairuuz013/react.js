@@ -1,0 +1,94 @@
+/* Import Google Fonts - Friendly & Casual */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Modern Cool Colors - No Gradients */
+  --primary-blue: #2563eb;
+  --primary-dark: #1e40af;
+  --accent-teal: #0d9488;
+  --accent-purple: #7c3aed;
+  
+  /* Light Theme */
+  --bg-light: #ffffff;
+  --surface-light: #f8fafc;
+  --text-light: #1e293b;
+  --text-light-secondary: #64748b;
+  --border-light: #e2e8f0;
+  --card-light: #ffffff;
+  
+  /* Dark Theme */
+  --bg-dark: #0f172a;
+  --surface-dark: #1e293b;
+  --text-dark: #f1f5f9;
+  --text-dark-secondary: #cbd5e1;
+  --border-dark: #334155;
+  --card-dark: #1e293b;
+  
+  /* Spacing - Casual & Airy */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  
+  /* Border Radius - Friendly Rounded */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  
+  /* Shadows - Subtle */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+  --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  line-height: 1.6;
+  transition: all var(--transition-normal);
+}
+
+/* Light Theme */
+body.light-theme {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+}
+
+/* Dark Theme */
+body.dark-theme {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--surface-light);
+}
+
+.dark-theme ::-webkit-scrollbar-track {
+  background: var(--surface-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-blue);
+  border-radius: var(--radius-sm);
+}
+
+.dark-theme ::-webkit-scrollbar-thumb {
+  background: var(--accent-teal);
+}
