@@ -1,22 +1,49 @@
-import style from "./Alert.module.css";
+import React from "react";
 
-function AlertBox({ type, children }) {
-  const alertClass = () => {
-    switch (type) {
-      case "success":
-        return style.success;
-      case "warning":
-        return style.warning;
-      case "error":
-        return style.error;
-      default:
-        return "";
-    }
+// Objek untuk menyimpan konfigurasi style dan ikon untuk setiap tipe alert
+const alertConfig = {
+  success: {
+    icon: "✅",
+    backgroundColor: "#d4edda",
+    borderColor: "#c3e6cb",
+    color: "#155724",
+  },
+  warning: {
+    icon: "⚠️",
+    backgroundColor: "#fff3cd",
+    borderColor: "#ffeeba",
+    color: "#856404",
+  },
+  error: {
+    icon: "❌",
+    backgroundColor: "#f8d7da",
+    borderColor: "#f5c6cb",
+    color: "#721c24",
+  },
+};
+
+function AlertBox({ type = "success", children }) {
+  // Ambil konfigurasi berdasarkan `type`
+  const config = alertConfig[type] || alertConfig.success;
+
+  // Style dasar untuk box
+  const boxStyle = {
+    padding: "16px",
+    margin: "16px",
+    border: `1px solid ${config.borderColor}`,
+    borderRadius: "8px",
+    backgroundColor: config.backgroundColor,
+    color: config.color,
+    fontFamily: "sans-serif",
+    display: "flex",
+    alignItems: "center",
+    gap: "12px", // Jarak antara ikon dan teks
   };
 
   return (
-    <div className={`${style.alert} ${alertClass()}`}>
-      {children}
+    <div style={boxStyle}>
+      <span style={{ fontSize: "20px" }}>{config.icon}</span>
+      <span>{children}</span>
     </div>
   );
 }
